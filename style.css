@@ -1,0 +1,17 @@
+/**
+ * Theme Name: Just My Website
+ * Theme URI: https://justmywebsite.com
+ * Description: A child theme for Blocksy by Creative Themes, from Jones E Designs. Requires the free Blocksy theme. Adds a plugin checklist, keeps preview pages out of search, and makes Modern Events Calendar match your Blocksy colours and fonts. Works best with Captain Max.
+ * Author: Jones E Designs
+ * Author URI: https://jonesedesigns.com
+ * Template: blocksy
+ * Version: 1.4.0
+ * Requires at least: 6.4
+ * Tested up to: 7.1
+ * Requires PHP: 7.4
+ * License: GNU General Public License v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: just-my-website
+ */
+
+/* Full-width sections use Blocksy's own alignfull + is-width-constrained. Add site-wide CSS in Code Snippets. */
