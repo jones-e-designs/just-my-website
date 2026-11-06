@@ -8,6 +8,7 @@ It requires the free Blocksy theme.
 ## What it adds
 
 - **Plugin checklist:** under Appearance › Just My Website, with Install and Activate buttons, plus a dashboard notice until everything is in place.
+- **Customizer API:** read and change Customizer settings over REST (`/wp-json/just-my-website/v1/customizer`), with history and undo.
 - **Login screens** use your logo and Blocksy colours.
 - **Preview pages:** pages whose web address starts with `preview-` stay out of search engines, the sitemap and the site's own search.
 - **Modern Events Calendar** follows your Blocksy colours and fonts.

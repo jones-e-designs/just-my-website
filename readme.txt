@@ -3,7 +3,7 @@ Contributors: Jones E Designs
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ Captain Max can look after your Just My Website site for you: https://captainmax
 * Theme image: original artwork for Jones E Designs.
 
 == Changelog ==
+
+= 1.4.2 =
+* Customizer settings can be read and changed over the REST API by people who can use the Customizer, with a change history and undo.
 
 = 1.4.1 =
 * Login, lost password and new password screens use your logo and colours.
