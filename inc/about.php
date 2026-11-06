@@ -39,6 +39,7 @@ function jmw_render_about() {
 				<a class="button button-primary" href="<?php echo esc_url( JMW_CAPTAIN_MAX_URL ); ?>" target="_blank" rel="noopener">Meet Captain Max</a>
 				<a class="button" href="https://justmywebsite.com/" target="_blank" rel="noopener">justmywebsite.com</a>
 			</p>
+			<p style="color:#646970">Using Google Analytics? Paste your measurement ID in <a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>">Customize</a> › General › Engagement.</p>
 			<p style="color:#646970;margin-bottom:0">By <a href="https://jonesedesigns.com/" target="_blank" rel="noopener">Jones E Designs</a> · Free software under the GPL.</p>
 		</div>
 	</div>

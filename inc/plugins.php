@@ -29,11 +29,11 @@ function jmw_plugin_list() {
 		array( 'slug' => 'autodescription', 'name' => 'The SEO Framework', 'group' => 'required', 'source' => 'wporg', 'why' => 'Page titles, descriptions and search settings.' ),
 		array( 'slug' => 'redirection', 'name' => 'Redirection', 'group' => 'required', 'source' => 'wporg', 'why' => 'Keeps old addresses working when a page moves.' ),
 		array( 'slug' => 'litespeed-cache', 'name' => 'LiteSpeed Cache', 'group' => 'required', 'source' => 'wporg', 'why' => 'Speed. Clear it after changes.' ),
-		array( 'slug' => 'google-site-kit', 'name' => 'Site Kit by Google', 'group' => 'required', 'source' => 'wporg', 'why' => 'Google Analytics and Search Console.' ),
 		array( 'slug' => 'fluentform', 'name' => 'Fluent Forms', 'group' => 'required', 'source' => 'wporg', 'why' => 'Contact and other forms.' ),
 		array( 'slug' => 'fluent-smtp', 'name' => 'FluentSMTP', 'group' => 'required', 'source' => 'wporg', 'why' => 'Makes sure site and form emails arrive.' ),
+		array( 'slug' => 'koko-analytics', 'name' => 'Koko Analytics', 'group' => 'required', 'source' => 'wporg', 'why' => 'Visitor stats without cookies or a consent banner.' ),
+		array( 'slug' => 'fluent-crm', 'name' => 'FluentCRM', 'group' => 'required', 'source' => 'wporg', 'why' => 'One record per person: form entries, sign-ups and history.' ),
 		array( 'slug' => 'modern-events-calendar-lite', 'name' => 'Modern Events Calendar Lite', 'group' => 'shelf', 'source' => 'bundled', 'why' => 'Events and repeating events, when the site needs a calendar.' ),
-		array( 'slug' => 'userswp', 'name' => 'UsersWP', 'group' => 'shelf', 'source' => 'wporg', 'why' => 'Member logins and profiles, when the site needs them.' ),
 	);
 	return apply_filters( 'jmw_plugin_list', $list );
 }

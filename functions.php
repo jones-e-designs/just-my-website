@@ -7,6 +7,7 @@
  * 3. Modern Events Calendar uses the Blocksy palette and fonts (inc/mec-bridge.php).
  * 4. Appearance › Just My Website: about this theme and the plugin checklist (inc/plugins.php, inc/about.php).
  * 5. Update notices from the theme's GitHub releases (inc/updates.php).
+ * 6. The login screens use the site's logo and Blocksy colours (inc/login.php).
  *
  * License: GNU General Public License v2 or later (see LICENSE).
  */
@@ -14,11 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JMW_VERSION', '1.4.0' );
+define( 'JMW_VERSION', '1.4.1' );
 
 require_once __DIR__ . '/inc/plugins.php';    // Plugin checklist and the plugin list for assistants
 require_once __DIR__ . '/inc/about.php';      // Appearance › Just My Website, and the /info signal
 require_once __DIR__ . '/inc/mec-bridge.php'; // Modern Events Calendar follows the Blocksy Customizer
+require_once __DIR__ . '/inc/login.php';      // Login screens use the site's logo and colours
 require_once __DIR__ . '/inc/updates.php';    // Update notices from GitHub releases
 
 add_action( 'wp_enqueue_scripts', function () {
