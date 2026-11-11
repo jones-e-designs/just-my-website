@@ -9,6 +9,7 @@
  * 5. Update notices from the theme's GitHub releases (inc/updates.php).
  * 6. The login screens use the site's logo and Blocksy colours (inc/login.php).
  * 7. Customizer settings can be read and changed over the REST API, with undo (inc/customizer-api.php).
+ * 8. Section backgrounds reach the screen edges; per-page and per-section edge-to-edge switch (inc/sections.php).
  *
  * License: GNU General Public License v2 or later (see LICENSE).
  */
@@ -16,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JMW_VERSION', '1.4.2' );
+define( 'JMW_VERSION', '1.4.3' );
 
 require_once __DIR__ . '/inc/plugins.php';    // Plugin checklist and the plugin list for assistants
 require_once __DIR__ . '/inc/about.php';      // Appearance › Just My Website, and the /info signal
@@ -24,6 +25,7 @@ require_once __DIR__ . '/inc/mec-bridge.php'; // Modern Events Calendar follows 
 require_once __DIR__ . '/inc/login.php';      // Login screens use the site's logo and colours
 require_once __DIR__ . '/inc/customizer-api.php'; // Customizer settings over the REST API, with undo
 require_once __DIR__ . '/inc/updates.php';    // Update notices from GitHub releases
+require_once __DIR__ . '/inc/sections.php';   // Full-width sections and the edge-to-edge switch
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme( get_template() )->get( 'Version' ) );

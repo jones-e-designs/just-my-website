@@ -5,7 +5,7 @@
  * Author: Jones E Designs
  * Author URI: https://jonesedesigns.com
  * Template: blocksy
- * Version: 1.4.2
+ * Version: 1.4.3
  * Requires at least: 6.4
  * Tested up to: 7.1
  * Requires PHP: 7.4
@@ -14,4 +14,64 @@
  * Text Domain: just-my-website
  */
 
-/* Full-width sections use Blocksy's own alignfull + is-width-constrained. Add site-wide CSS in Code Snippets. */
+/* ---- Full-width sections ---------------------------------------------------------------------------
+ * Every top-level section of a page or post reaches both screen edges, so a background never stops short.
+ * Its content stays exactly at the page's normal width. Works with or without Blocksy's alignfull and
+ * is-width-constrained. Switches (see inc/sections.php):
+ *  - .jmw-contained   a coloured box that stays inside the page width.
+ *  - .jmw-edge        one section whose content also goes edge to edge.
+ *  - body.jmw-edge-page   the whole page edge to edge ("Edge to edge" box on the edit screen).
+ * A wrapper around all of a page's sections (<main>, <section> children, or .jmw-wrap) is handled too.
+ * Add site-wide CSS in Code Snippets.
+ */
+html, body { overflow-x: clip; }
+/* 100cqw = the page's width (without the scrollbar). The content width matches Blocksy's own. */
+#main { container-type: inline-size; }
+.entry-content {
+  --jmw-content: min(var(--theme-block-max-width, 1290px), var(--theme-container-edge-spacing, 90vw));
+  --jmw-pad: max(0px, calc((100cqw - var(--jmw-content)) / 2));
+}
+
+.entry-content > :not(.jmw-contained, .alignwide, img, iframe, video, hr, br, script, style, link) {
+  box-sizing: border-box;
+  width: 100cqw;
+  max-width: 100cqw;
+  margin-left: calc(50% - 50cqw);
+  margin-right: calc(50% - 50cqw);
+}
+/* Content stays at the page width. A section marked alignfull keeps Blocksy's own way of doing this
+   (an inner .is-width-constrained), so a full-width photo inside it can still reach the edges. */
+.entry-content > :not(.alignfull, .jmw-contained, .alignwide, img, iframe, video, hr, br, script, style, link) {
+  padding-left: var(--jmw-pad) !important;
+  padding-right: var(--jmw-pad) !important;
+}
+
+/* A wrapper around the sections: full width itself, its sections get the edge-to-edge treatment instead. */
+.entry-content > :is(main, .jmw-wrap, :has(> section)):not(.jmw-contained) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.entry-content > :is(main, .jmw-wrap, :has(> section)):not(.jmw-contained) > :not(.jmw-contained, script, style) {
+  box-sizing: border-box;
+  width: auto;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+.entry-content > :is(main, .jmw-wrap, :has(> section)):not(.jmw-contained) > :not(.alignfull, .jmw-contained, script, style) {
+  padding-left: var(--jmw-pad) !important;
+  padding-right: var(--jmw-pad) !important;
+}
+
+/* Edge to edge: one section, or the whole page. (#jmw-edge never exists; it only makes this rule win.) */
+.entry-content .jmw-edge:is(.jmw-edge, #jmw-edge),
+.jmw-edge-page .entry-content > :not(.jmw-contained),
+.jmw-edge-page .entry-content > :is(main, .jmw-wrap, :has(> section)) > :not(.jmw-contained):is(*, #jmw-edge) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.entry-content .jmw-edge .is-width-constrained,
+.jmw-edge-page .entry-content .is-width-constrained {
+  width: auto;
+  max-width: none;
+}
