@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'JMW_VERSION', '1.4.3' );
+define( 'JMW_VERSION', '1.4.4' );
 
 require_once __DIR__ . '/inc/plugins.php';    // Plugin checklist and the plugin list for assistants
 require_once __DIR__ . '/inc/about.php';      // Appearance › Just My Website, and the /info signal

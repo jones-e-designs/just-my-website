@@ -27,10 +27,10 @@ add_action( 'rest_api_init', function () {
 } );
 
 function jmw_render_about() {
-	$img = get_stylesheet_directory_uri() . '/screenshot.jpg';
+	$img = add_query_arg( 'ver', JMW_VERSION, get_stylesheet_directory_uri() . '/screenshot.jpg' );
 	?>
 	<div class="jmw-about" style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;max-width:980px;background:#fff;border:1px solid #dcdcde;border-radius:8px;padding:22px 24px;margin:16px 0 8px">
-		<img src="<?php echo esc_url( $img ); ?>" alt="Just My Website: a shopkeeper under his Just My Website sign, with Captain Max the fox in the doorway" style="width:280px;max-width:100%;height:auto;border-radius:6px">
+		<img src="<?php echo esc_url( $img ); ?>" alt="Just My Website: a family picnic in the countryside, under the Just My Website name" style="width:280px;max-width:100%;height:auto;border-radius:6px">
 		<div style="flex:1;min-width:260px">
 			<h2 style="margin-top:0">Just My Website <span style="color:#646970;font-weight:400;font-size:13px">version <?php echo esc_html( JMW_VERSION ); ?></span></h2>
 			<p>A child theme for <a href="https://creativethemes.com/blocksy/" target="_blank" rel="noopener">Blocksy</a> by Creative Themes. Blocksy does the heavy lifting; Just My Website adds the finishing touches and keeps your site tidy.</p>
